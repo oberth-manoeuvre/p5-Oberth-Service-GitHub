@@ -5,11 +5,11 @@ use Modern::Perl;
 use Test::More tests => 1;
 use Test::Exception;
 
-use Project::Manager::Platform::GitHub::User;
-use Project::Manager::Config;
+use SeeLucid::Service::GitHub::User;
+use SeeLucid::Config;
 
-my $user = Project::Manager::Platform::GitHub::User->new( user => 'zmughal' );
-my $token = Project::Manager::Config->github_token;
+my $user = SeeLucid::Service::GitHub::User->new( user => 'zmughal' );
+my $token = SeeLucid::Config->github_token;
 my $r = $user->_pithub_client
 	->repos(
 		token => $token,

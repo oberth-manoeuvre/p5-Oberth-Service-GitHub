@@ -1,4 +1,4 @@
-package Project::Manager::Platform::GitHub::PithubRole;
+package SeeLucid::Service::GitHub::PithubRole;
 
 use strict;
 use warnings;

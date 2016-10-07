@@ -1,10 +1,10 @@
-package Project::Manager::Platform::GitHub::User;
+package SeeLucid::Service::GitHub::User;
 
 use Modern::Perl;
 use Moo;
 use Pithub;
 
-with qw(Project::Manager::Platform::GitHub::PithubRole);
+with qw(SeeLucid::Service::GitHub::PithubRole);
 
 has user => ( is => 'ro', required => 0 );
 

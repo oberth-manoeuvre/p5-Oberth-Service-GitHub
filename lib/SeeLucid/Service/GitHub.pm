@@ -1,4 +1,4 @@
-package Project::Manager::Platform::GitHub;
+package SeeLucid::Service::GitHub;
 
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use HTTP::Request;
 use Net::Netrc;
 use List::AllUtils qw(first);
 use JSON::MaybeXS;
-use Project::Manager::Error;
+use SeeLucid::Error;
 
 sub create_token_interactive {
 	my ($self) = @_;
@@ -57,7 +57,7 @@ sub create_token {
 
 	my $parameters = {
 		scopes   => ["repo", "read:org"],
-		note     => "Project::Manager",
+		note     => "SeeLucid",
 		note_url => "https://github.com/SeeLucid/p5-Project-Manager",
 	};
 
@@ -75,7 +75,7 @@ sub create_token {
 		return $response_content->{token};
 	}
 	else {
-		Project::Manager::Error::Authorization->throw(
+		SeeLucid::Error::Authorization->throw(
 			   $response_content->{message}
 			|| "Unspecified error",
 		);
