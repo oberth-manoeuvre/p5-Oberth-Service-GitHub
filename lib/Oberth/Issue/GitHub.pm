@@ -1,4 +1,4 @@
-package SeeLucid::Issue::GitHub;
+package Oberth::Issue::GitHub;
 
 
 use strict;
@@ -6,7 +6,7 @@ use warnings;
 
 use Moo;
 
-extends 'SeeLucid::Issue';
+extends 'Oberth::Issue';
 
 has _github_content => ( is => 'ro' );
 has repo => ( is => 'ro', weak_ref => 1 );

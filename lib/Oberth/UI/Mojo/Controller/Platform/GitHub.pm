@@ -1,4 +1,4 @@
-package SeeLucid::UI::Mojo::Controller::Platform::GitHub;
+package Oberth::UI::Mojo::Controller::Platform::GitHub;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub repos {

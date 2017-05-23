@@ -1,10 +1,10 @@
-package SeeLucid::Service::GitHub::User;
+package Oberth::Service::GitHub::User;
 
 use Modern::Perl;
 use Moo;
 use Pithub;
 
-with qw(SeeLucid::Service::GitHub::PithubRole);
+with qw(Oberth::Service::GitHub::PithubRole);
 
 has user => ( is => 'ro', required => 0 );
 

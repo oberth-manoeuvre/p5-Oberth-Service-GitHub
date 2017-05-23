@@ -1,4 +1,4 @@
-package SeeLucid::Service::GitHub::PithubRole;
+package Oberth::Service::GitHub::PithubRole;
 
 use strict;
 use warnings;

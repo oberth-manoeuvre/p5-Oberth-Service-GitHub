@@ -1,4 +1,4 @@
-package SeeLucid::Service::GitHub;
+package Oberth::Service::GitHub;
 
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ use HTTP::Request;
 use Net::Netrc;
 use List::AllUtils qw(first);
 use JSON::MaybeXS;
-use SeeLucid::Error;
+use Oberth::Error;
 
 sub create_token_interactive {
 	my ($self) = @_;
@@ -57,8 +57,8 @@ sub create_token {
 
 	my $parameters = {
 		scopes   => ["repo", "read:org"],
-		note     => "SeeLucid",
-		note_url => "https://github.com/SeeLucid/p5-Project-Manager",
+		note     => "Oberth",
+		note_url => "https://github.com/Oberth/p5-Project-Manager",
 	};
 
 	my $ua = LWP::UserAgent->new;
@@ -75,7 +75,7 @@ sub create_token {
 		return $response_content->{token};
 	}
 	else {
-		SeeLucid::Error::Authorization->throw(
+		Oberth::Error::Authorization->throw(
 			   $response_content->{message}
 			|| "Unspecified error",
 		);
