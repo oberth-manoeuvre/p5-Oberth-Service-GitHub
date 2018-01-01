@@ -1,4 +1,5 @@
 package Oberth::Service::GitHub;
+# ABSTRACT: Interface to GitHub
 
 use strict;
 use warnings;
@@ -8,20 +9,7 @@ use HTTP::Request;
 use Net::Netrc;
 use List::AllUtils qw(first);
 use JSON::MaybeXS;
-use Oberth::Error;
-
-sub create_token_interactive {
-	my ($self) = @_;
-	local $| = 1;
-	print "Username: ";
-	chomp(my $username = <>);
-	print "Password: ";
-	chomp(my $password = <>);
-	print "\n\n";
-
-	exit unless $username && $password;
-	$self->create_token( username => $username, password => $password );
-}
+use Oberth::Common::Error;
 
 sub _get_github_user_pass {
 	my $mach = first { defined }
@@ -58,7 +46,7 @@ sub create_token {
 	my $parameters = {
 		scopes   => ["repo", "read:org"],
 		note     => "Oberth",
-		note_url => "https://github.com/Oberth/p5-Project-Manager",
+		note_url => "https://github.com/oberth-manoeuvre",
 	};
 
 	my $ua = LWP::UserAgent->new;
@@ -75,7 +63,7 @@ sub create_token {
 		return $response_content->{token};
 	}
 	else {
-		Oberth::Error::Authorization->throw(
+		Oberth::Common::Error::Authorization->throw(
 			   $response_content->{message}
 			|| "Unspecified error",
 		);
