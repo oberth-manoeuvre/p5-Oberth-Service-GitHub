@@ -5,11 +5,11 @@ use Modern::Perl;
 use Test::More tests => 1;
 use Test::Exception;
 
+use Oberth::Service::GitHub;
 use Oberth::Service::GitHub::User;
-use Oberth::Config;
 
 my $user = Oberth::Service::GitHub::User->new( user => 'zmughal' );
-my $token = Oberth::Config->github_token;
+my $token = Oberth::Service::GitHub->get_token;
 my $r = $user->_pithub_client
 	->repos(
 		token => $token,
