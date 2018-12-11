@@ -1,10 +1,10 @@
-package Oberth::Service::GitHub::User;
+package Oberth::Block::Service::GitHub::User;
 
 use Modern::Perl;
 use Moo;
 use Pithub;
 
-with qw(Oberth::Service::GitHub::PithubRole);
+with qw(Oberth::Block::Service::GitHub::PithubRole);
 
 has user => ( is => 'ro', required => 0 );
 

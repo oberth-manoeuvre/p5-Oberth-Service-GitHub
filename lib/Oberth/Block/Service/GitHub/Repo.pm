@@ -1,10 +1,10 @@
-package Oberth::Service::GitHub::Repo;
+package Oberth::Block::Service::GitHub::Repo;
 
 use Modern::Perl;
 use Moo;
-use Oberth::Issue::GitHub;
+use Oberth::Block::Service::GitHub::Issue;
 
-with qw(Oberth::Service::GitHub::PithubRole);
+with qw(Oberth::Block::Service::GitHub::PithubRole);
 
 has uri => ( is => 'ro',
 	trigger => 1,     # _trigger_uri
@@ -79,7 +79,7 @@ sub number_of_open_issues {
 sub issues {
 	my ($self) = @_;
 	[ map {
-		Oberth::Issue::GitHub->new( $_, repo => $self )
+		Oberth::Block::Service::GitHub::Issue->new( $_, repo => $self )
 	} @{ $self->_pithub_client->issues->list(
 			user => $self->namespace,
 			repo => $self->name,

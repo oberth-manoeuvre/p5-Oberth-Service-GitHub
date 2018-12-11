@@ -1,4 +1,4 @@
-package Oberth::Service::GitHub::PithubRole;
+package Oberth::Block::Service::GitHub::PithubRole;
 
 use strict;
 use warnings;

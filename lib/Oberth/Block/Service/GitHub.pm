@@ -1,4 +1,4 @@
-package Oberth::Service::GitHub;
+package Oberth::Block::Service::GitHub;
 # ABSTRACT: Interface to GitHub
 
 use strict;
@@ -9,7 +9,7 @@ use HTTP::Request;
 use Net::Netrc;
 use List::AllUtils qw(first);
 use JSON::MaybeXS;
-use Oberth::Common::Error;
+use Oberth::Manoeuvre::Common::Error;
 
 sub _get_github_user_pass {
 	my $mach = first { defined }
@@ -63,7 +63,7 @@ sub create_token {
 		return $response_content->{token};
 	}
 	else {
-		Oberth::Common::Error::Authorization->throw(
+		Oberth::Manoeuvre::Common::Error::Authorization->throw(
 			   $response_content->{message}
 			|| "Unspecified error",
 		);

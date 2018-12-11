@@ -1,9 +1,9 @@
-use Oberth::Common::Setup;
-package Oberth::Account::GitHub;
+use Oberth::Manoeuvre::Common::Setup;
+package Oberth::Block::Service::GitHub::Account;
 # ABSTRACT: GitHub account
 
 use Moo;
-extends qw(Oberth::Account);
+extends qw(Oberth::Manoeuvre::Account);
 with 'DBIx::Class::InflateColumn::JSON2Object::Role::Storable';
 
 has password => (

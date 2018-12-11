@@ -1,4 +1,4 @@
-use Oberth::Common::Setup;
+use Oberth::Manoeuvre::Common::Setup;
 package Oberth::CLI::Command::GitHub;
 # ABSTRACT: A command for GitHub
 
