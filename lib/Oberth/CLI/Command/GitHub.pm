@@ -5,6 +5,8 @@ package Oberth::CLI::Command::GitHub;
 use Moo;
 use CLI::Osprey;
 
+subcommand 'issue-count' => 'Oberth::CLI::Command::GitHub::IssueCount';
+
 sub create_token_interactive {
 	my ($self) = @_;
 	local $| = 1;
@@ -20,6 +22,6 @@ sub create_token_interactive {
 
 subcommand login => method() {
 	$self->create_token_interactive;
-}
+};
 
 1;
