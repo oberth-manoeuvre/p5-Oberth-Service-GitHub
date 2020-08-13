@@ -7,6 +7,8 @@ use CLI::Osprey;
 
 subcommand 'issue-count' => 'Oberth::CLI::Command::GitHub::IssueCount';
 
+subcommand 'user-repos' => 'Oberth::CLI::Command::GitHub::UserRepos';
+
 sub create_token_interactive {
 	my ($self) = @_;
 	local $| = 1;
