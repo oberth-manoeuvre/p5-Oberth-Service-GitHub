@@ -9,7 +9,12 @@ use Oberth::Block::Service::GitHub;
 use Oberth::Block::Service::GitHub::User;
 
 my $user = Oberth::Block::Service::GitHub::User->new( user => 'zmughal' );
-my $token = Oberth::Block::Service::GitHub->get_token;
+#my $token = Oberth::Block::Service::GitHub->get_token;
+my $token = do {
+	my $gconfig_token = `git config --get github.token`;
+	chomp $gconfig_token;
+	$gconfig_token;
+};
 my $r = $user->_pithub_client
 	->repos(
 		token => $token,
@@ -25,7 +30,16 @@ my $r = $user->_pithub_client
 #say $r->count;
 #exit;
 while( my $row = $r->next ) {
-	say $row->{full_name};
+	print $row->{full_name};
+	if( $row->{fork} ) {
+		my $repo = $user->_pithub_client->repos(
+			token => $token,
+			auto_pagination => 1,
+		)->get( user => $row->{owner}{login}, repo => $row->{name} );
+		my $parent_repo = $repo->content->{parent}{full_name};
+		print " (forked from: @{[ $parent_repo ]})";
+	}
+	say "";
 }
 #do {
 	#use DDP; p $r->request;
