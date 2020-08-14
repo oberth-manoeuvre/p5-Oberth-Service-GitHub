@@ -1,4 +1,4 @@
-package Oberth::Block::Service::GitHub::PithubRole;
+package Orbital::Payload::Service::GitHub::PithubRole;
 
 use strict;
 use warnings;

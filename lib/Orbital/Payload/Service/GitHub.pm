@@ -1,4 +1,4 @@
-package Oberth::Block::Service::GitHub;
+package Orbital::Payload::Service::GitHub;
 # ABSTRACT: Interface to GitHub
 
 use strict;
@@ -9,7 +9,7 @@ use HTTP::Request;
 use Net::Netrc;
 use List::AllUtils qw(first);
 use JSON::MaybeXS;
-use Oberth::Manoeuvre::Common::Error;
+use Orbital::Transfer::Common::Error;
 
 sub _get_github_user_pass {
 	my $mach = first { defined }
@@ -45,8 +45,8 @@ sub create_token {
 
 	my $parameters = {
 		scopes   => ["repo", "read:org"],
-		note     => "Oberth",
-		note_url => "https://github.com/oberth-manoeuvre",
+		note     => "Orbital",
+		note_url => "https://github.com/orbital-transfer",
 	};
 
 	my $ua = LWP::UserAgent->new;
@@ -63,7 +63,7 @@ sub create_token {
 		return $response_content->{token};
 	}
 	else {
-		Oberth::Manoeuvre::Common::Error::Authorization->throw(
+		Orbital::Transfer::Common::Error::Authorization->throw(
 			   $response_content->{message}
 			|| "Unspecified error",
 		);

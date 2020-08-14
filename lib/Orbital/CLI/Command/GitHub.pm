@@ -1,13 +1,13 @@
-use Oberth::Manoeuvre::Common::Setup;
-package Oberth::CLI::Command::GitHub;
+use Orbital::Transfer::Common::Setup;
+package Orbital::CLI::Command::GitHub;
 # ABSTRACT: A command for GitHub
 
 use Moo;
 use CLI::Osprey;
 
-subcommand 'issue-count' => 'Oberth::CLI::Command::GitHub::IssueCount';
+subcommand 'issue-count' => 'Orbital::CLI::Command::GitHub::IssueCount';
 
-subcommand 'user-repos' => 'Oberth::CLI::Command::GitHub::UserRepos';
+subcommand 'user-repos' => 'Orbital::CLI::Command::GitHub::UserRepos';
 
 sub create_token_interactive {
 	my ($self) = @_;

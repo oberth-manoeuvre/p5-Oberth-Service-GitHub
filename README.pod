@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-Oberth::Block::Service::GitHub - Interface to GitHub
+Orbital::Payload::Service::GitHub - Interface to GitHub
 
 =head1 VERSION
 

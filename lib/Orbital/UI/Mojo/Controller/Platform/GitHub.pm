@@ -1,4 +1,4 @@
-package Oberth::UI::Mojo::Controller::Platform::GitHub;
+package Orbital::UI::Mojo::Controller::Platform::GitHub;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub repos {

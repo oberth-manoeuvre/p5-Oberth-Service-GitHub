@@ -5,11 +5,11 @@ use Modern::Perl;
 use Test::More tests => 1;
 use Test::Exception;
 
-use Oberth::Block::Service::GitHub;
-use Oberth::Block::Service::GitHub::User;
+use Orbital::Payload::Service::GitHub;
+use Orbital::Payload::Service::GitHub::User;
 
-my $user = Oberth::Block::Service::GitHub::User->new( user => 'zmughal' );
-#my $token = Oberth::Block::Service::GitHub->get_token;
+my $user = Orbital::Payload::Service::GitHub::User->new( user => 'zmughal' );
+#my $token = Orbital::Payload::Service::GitHub->get_token;
 my $token = do {
 	my $gconfig_token = `git config --get github.token`;
 	chomp $gconfig_token;

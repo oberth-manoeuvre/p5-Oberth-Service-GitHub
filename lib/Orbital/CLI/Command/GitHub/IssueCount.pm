@@ -1,5 +1,5 @@
-use Oberth::Manoeuvre::Common::Setup;
-package Oberth::CLI::Command::GitHub::IssueCount;
+use Orbital::Transfer::Common::Setup;
+package Orbital::CLI::Command::GitHub::IssueCount;
 # ABSTRACT: A command to list the number of GitHub issues for a repository
 
 use Moo;
@@ -13,6 +13,6 @@ method run(@) {
 	use DDP; p %github_to_issues;
 }
 
-with qw(Oberth::CLI::Command::Role::GitHubRepos);
+with qw(Orbital::CLI::Command::Role::GitHubRepos);
 
 1;
