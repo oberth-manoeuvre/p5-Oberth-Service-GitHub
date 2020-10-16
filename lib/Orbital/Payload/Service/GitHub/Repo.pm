@@ -86,4 +86,9 @@ sub issues {
 		)->content } ];
 }
 
+sub _github_slug {
+	my ($self) = @_;
+	return "@{[ $self->namespace ]}/@{[ $self->name ]}";
+}
+
 1;
