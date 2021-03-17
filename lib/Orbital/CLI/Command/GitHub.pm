@@ -11,6 +11,8 @@ subcommand 'user-repos' => 'Orbital::CLI::Command::GitHub::UserRepos';
 
 subcommand 'deploy-key' => 'Orbital::CLI::Command::GitHub::DeployKey';
 
+subcommand 'actions' => 'Orbital::CLI::Command::GitHub::Actions';
+
 sub create_token_interactive {
 	my ($self) = @_;
 	local $| = 1;
