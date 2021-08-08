@@ -6,8 +6,8 @@ use Moo::Role;
 
 use Set::Scalar;
 use Orbital::Payload::VCS::Git;
-use Orbital::Payload::Service::GitHub;
-use Orbital::Payload::Service::GitHub::Repo;
+use Orbital::Payload::Serv::GitHub;
+use Orbital::Payload::Serv::GitHub::Repo;
 use List::AllUtils qw(first);
 
 has github_repos => ( is => 'lazy' );
@@ -21,7 +21,7 @@ method _build_github_repo_origin() {
 	my $remotes = $vcs->remotes;
 	my $origin = first { $_->name eq 'origin' } @$remotes;
 
-	return Orbital::Payload::Service::GitHub::Repo->new(
+	return Orbital::Payload::Serv::GitHub::Repo->new(
 		uri => $origin->fetch,
 	);
 }
@@ -37,7 +37,7 @@ method _build_github_repos() {
 
 	my @github;
 	for my $remote (@$remote_uris) {
-		push @github, Orbital::Payload::Service::GitHub::Repo->new(
+		push @github, Orbital::Payload::Serv::GitHub::Repo->new(
 			uri => $remote,
 		);
 	}

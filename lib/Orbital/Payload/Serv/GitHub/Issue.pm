@@ -1,4 +1,4 @@
-package Orbital::Payload::Service::GitHub::Issue;
+package Orbital::Payload::Serv::GitHub::Issue;
 
 
 use strict;

@@ -1,4 +1,4 @@
-package Orbital::Payload::Service::GitHub::PithubRole;
+package Orbital::Payload::Serv::GitHub::PithubRole;
 
 use strict;
 use warnings;

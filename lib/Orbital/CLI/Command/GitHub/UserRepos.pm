@@ -4,12 +4,12 @@ package Orbital::CLI::Command::GitHub::UserRepos;
 
 use Moo;
 use CLI::Osprey;
-use Orbital::Payload::Service::GitHub::User;
+use Orbital::Payload::Serv::GitHub::User;
 
 method run(@) {
 	my $token = `git config --get github.token`;
 	chomp $token;
-	my $user = Orbital::Payload::Service::GitHub::User->new( github_token => $token );
+	my $user = Orbital::Payload::Serv::GitHub::User->new( github_token => $token );
 	use Pry; pry();#DEBUG
 	...
 }

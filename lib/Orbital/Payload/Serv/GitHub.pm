@@ -1,4 +1,4 @@
-package Orbital::Payload::Service::GitHub;
+package Orbital::Payload::Serv::GitHub;
 # ABSTRACT: Interface to GitHub
 
 use strict;

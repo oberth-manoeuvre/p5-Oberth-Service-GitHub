@@ -1,10 +1,10 @@
-package Orbital::Payload::Service::GitHub::User;
+package Orbital::Payload::Serv::GitHub::User;
 
 use Modern::Perl;
 use Moo;
 use Pithub;
 
-with qw(Orbital::Payload::Service::GitHub::PithubRole);
+with qw(Orbital::Payload::Serv::GitHub::PithubRole);
 
 has user => ( is => 'ro', required => 0 );
 

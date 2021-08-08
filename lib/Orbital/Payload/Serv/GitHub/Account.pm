@@ -1,5 +1,5 @@
 use Orbital::Transfer::Common::Setup;
-package Orbital::Payload::Service::GitHub::Account;
+package Orbital::Payload::Serv::GitHub::Account;
 # ABSTRACT: GitHub account
 
 use Moo;

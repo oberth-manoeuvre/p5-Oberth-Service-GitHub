@@ -1,10 +1,10 @@
-package Orbital::Payload::Service::GitHub::Repo;
+package Orbital::Payload::Serv::GitHub::Repo;
 
 use Modern::Perl;
 use Moo;
-use Orbital::Payload::Service::GitHub::Issue;
+use Orbital::Payload::Serv::GitHub::Issue;
 
-with qw(Orbital::Payload::Service::GitHub::PithubRole);
+with qw(Orbital::Payload::Serv::GitHub::PithubRole);
 
 has uri => ( is => 'ro',
 	trigger => 1,     # _trigger_uri
@@ -79,7 +79,7 @@ sub number_of_open_issues {
 sub issues {
 	my ($self) = @_;
 	[ map {
-		Orbital::Payload::Service::GitHub::Issue->new( $_, repo => $self )
+		Orbital::Payload::Serv::GitHub::Issue->new( $_, repo => $self )
 	} @{ $self->_pithub_client->issues->list(
 			user => $self->namespace,
 			repo => $self->name,
