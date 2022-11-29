@@ -1,6 +1,6 @@
+use Orbital::Transfer::Common::Setup;
 package Orbital::Payload::Serv::GitHub::User;
 
-use Modern::Perl;
 use Moo;
 use Pithub;
 

@@ -1,8 +1,6 @@
-use Modern::Perl;
+use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Container::GitHub;
 # ABSTRACT: Container for GitHub
-
-use Orbital::Transfer::Common::Setup;
 
 method commands() {
 	return +{

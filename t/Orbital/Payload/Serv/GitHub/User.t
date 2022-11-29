@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 
-use Modern::Perl;
 use Test::More tests => 1;
 use Test::Exception;
 
