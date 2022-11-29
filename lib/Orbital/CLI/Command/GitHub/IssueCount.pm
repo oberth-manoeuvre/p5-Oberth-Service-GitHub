@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::GitHub::IssueCount;
 # ABSTRACT: A command to list the number of GitHub issues for a repository
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 use CLI::Osprey;
 

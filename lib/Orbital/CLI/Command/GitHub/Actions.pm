@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::GitHub::Actions;
 # ABSTRACT: A command for working with GitHub Actions
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 use CLI::Osprey;
 use YAML;

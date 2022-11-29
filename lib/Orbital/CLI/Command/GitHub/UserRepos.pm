@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::GitHub::UserRepos;
 # ABSTRACT: A command to list the user repos
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 use CLI::Osprey;
 use Orbital::Payload::Serv::GitHub::User;

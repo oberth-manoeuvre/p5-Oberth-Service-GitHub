@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::Role::GitHubRepos;
 # ABSTRACT: Gets GitHub repos from repo path
 
+use Orbital::Transfer::Common::Setup;
 use Moo::Role;
 
 use Set::Scalar;

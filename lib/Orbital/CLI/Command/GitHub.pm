@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::GitHub;
 # ABSTRACT: A command for GitHub
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 use CLI::Osprey;
 

@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::CLI::Command::GitHub::DeployKey;
 # ABSTRACT: A command for handling repo deploy keys
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 use CLI::Osprey;
 

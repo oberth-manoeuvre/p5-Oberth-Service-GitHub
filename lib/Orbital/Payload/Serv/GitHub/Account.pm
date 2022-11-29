@@ -2,6 +2,7 @@ use Orbital::Transfer::Common::Setup;
 package Orbital::Payload::Serv::GitHub::Account;
 # ABSTRACT: GitHub account
 
+use Orbital::Transfer::Common::Setup;
 use Moo;
 extends qw(Orbital::Transfer::Account);
 with 'DBIx::Class::InflateColumn::JSON2Object::Role::Storable';
