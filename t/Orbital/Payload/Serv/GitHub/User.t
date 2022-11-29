@@ -39,7 +39,7 @@ while( my $row = $r->next ) {
 		my $parent_repo = $repo->content->{parent}{full_name};
 		print " (forked from: @{[ $parent_repo ]})";
 	}
-	say "";
+	print "\n";
 }
 #do {
 	#use DDP; p $r->request;

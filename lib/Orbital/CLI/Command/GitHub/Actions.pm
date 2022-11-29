@@ -8,7 +8,7 @@ use YAML;
 use URI::Encode qw(uri_encode);
 
 subcommand 'list-workflows' => method() {
-	say join "\n", @{ $self->get_workflows };
+	print join("\n", @{ $self->get_workflows }), "\n";
 };
 
 method get_workflows() {

@@ -17,7 +17,7 @@ subcommand 'list' => method() {
 			user => $first_repo->namespace,
 			repo => $first_repo->name
 		);
-	say "Keys for: @{[ $first_repo->_github_slug ]}";
+	print "Keys for: @{[ $first_repo->_github_slug ]}\n";
 	use Data::Dumper; print Dumper $keys_data->content;
 };
 
