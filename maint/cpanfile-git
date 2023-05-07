@@ -1,0 +1,6 @@
+requires 'Orbital::Payload::VCS::Git',
+	git => 'https://github.com/orbital-transfer/p5-Orbital-Payload-VCS-Git.git',
+	branch => 'master';
+requires 'Orbital::CLI',
+	git => 'https://github.com/orbital-transfer/p5-Orbital-CLI.git',
+	branch => 'master';
