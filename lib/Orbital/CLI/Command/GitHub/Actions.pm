@@ -4,7 +4,7 @@ package Orbital::CLI::Command::GitHub::Actions;
 
 use Orbital::Transfer::Common::Setup;
 use Moo;
-use CLI::Osprey;
+use CLI::Osprey on_demand => 1;
 use YAML;
 use URI::Encode qw(uri_encode);
 

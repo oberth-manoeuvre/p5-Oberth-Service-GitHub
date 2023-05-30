@@ -4,7 +4,7 @@ package Orbital::CLI::Command::GitHub;
 
 use Orbital::Transfer::Common::Setup;
 use Moo;
-use CLI::Osprey;
+use CLI::Osprey on_demand => 1;
 
 subcommand 'issue-count' => 'Orbital::CLI::Command::GitHub::IssueCount';
 

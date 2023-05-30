@@ -4,7 +4,7 @@ package Orbital::CLI::Command::GitHub::UserRepos;
 
 use Orbital::Transfer::Common::Setup;
 use Moo;
-use CLI::Osprey;
+use CLI::Osprey on_demand => 1;
 use Orbital::Payload::Serv::GitHub::User;
 
 method run(@) {

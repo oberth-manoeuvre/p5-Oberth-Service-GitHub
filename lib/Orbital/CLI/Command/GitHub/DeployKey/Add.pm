@@ -4,7 +4,7 @@ package Orbital::CLI::Command::GitHub::DeployKey::Add;
 
 use Orbital::Transfer::Common::Setup;
 use Moo;
-use CLI::Osprey;
+use CLI::Osprey on_demand => 1;
 
 option deploy_key_path => (
 	is => 'ro',
