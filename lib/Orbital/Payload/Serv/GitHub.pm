@@ -7,7 +7,7 @@ use warnings;
 use LWP::UserAgent;
 use HTTP::Request;
 use Net::Netrc;
-use List::AllUtils qw(first);
+use List::Util::MaybeXS qw(first);
 use JSON::MaybeXS;
 use Orbital::Transfer::Common::Error;
 

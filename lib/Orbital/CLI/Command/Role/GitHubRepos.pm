@@ -9,7 +9,7 @@ use Set::Scalar;
 use Orbital::Payload::VCS::Git;
 use Orbital::Payload::Serv::GitHub;
 use Orbital::Payload::Serv::GitHub::Repo;
-use List::AllUtils qw(first);
+use List::Util::MaybeXS qw(first);
 
 has github_repos => ( is => 'lazy' );
 
